@@ -10,7 +10,7 @@ from data import custom_transforms as tr
 class FBPSegmentation(data.Dataset):
     NUM_CLASSES = 25
 
-    def __init__(self, args, root="/data1/gyl/RS_DATASET/FBP/train", split="train"):
+    def __init__(self, args, root="/data1/gyl/RS_DATASET/FBP", split="train"):
         
         self.root = root
         self.split = split
