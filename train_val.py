@@ -184,6 +184,9 @@ class Trainer(object):
         if args.dataset == 'GID':
             weight = None
             self.criterion = SegmentationLosses(weight=weight, cuda=args.cuda).build_loss(mode='ce')
+        if args.dataset == 'FBP':
+            weight = None
+            self.criterion = SegmentationLosses(weight=weight, cuda=args.cuda).build_loss(mode='ce')
 
         self.model = fpn
         self.optimizer = optimizer
