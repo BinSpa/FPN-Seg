@@ -19,7 +19,12 @@ class FBPSegmentation(data.Dataset):
         self.images_base = os.path.join(self.root, self.split, 'rgb_images')
         self.annotations_base = os.path.join(self.root, self.split, 'gid_labels')
         self.ignore_index = 255
-        self.class_names = ["background", "built-up", "farmland", "forest", "meadow", "water"]
+        self.class_names = ['unlabeled', 'industrial area', 'paddy field', 'irrigated field', 'dry cropland',
+                 'garden land', 'arbor forest', 'shrub forest', 'park', 'natural meadow', 'artificial meadow', 
+                 'river', 'urban residential', 'lake', 'pond', 'fish pond',
+                 'snow', 'bareland', 'rural residential', 'stadium',
+                 'square', 'road', 'overpass', 'railway station', 'airport'
+                 ]
         self.class_nums = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]
         self.img_list = os.listdir(self.images_base)
 

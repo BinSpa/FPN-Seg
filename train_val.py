@@ -64,7 +64,7 @@ def parse_args():
                         default=True,)
     parser.add_argument('--gpu_ids', dest='gpu_ids',
                         help='use which gpu to train, must be a comma-separated list of integers only (defalt=0)',
-                        default='0,1', type=str)
+                        default='0', type=str)
     # batch size
     parser.add_argument('--batch_size', dest='batch_size',
 					    help='batch_size',
@@ -159,7 +159,8 @@ class Trainer(object):
             kwargs = {'num_workers': args.num_workers, 'pin_memory': True}
             self.train_loader, self.val_loader, _, self.num_class = make_data_loader(args, **kwargs)
         elif args.dataset == 'FBP':
-            pass
+            kwargs = {'num_workers': args.num_workers, 'pin_memory': True}
+            self.train_loader, self.val_loader, _, self.num_class = make_data_loader(args, **kwargs)
         # Define network
         if args.net == 'resnet101':
             blocks = [2,4,23,3]
