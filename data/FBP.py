@@ -17,7 +17,7 @@ class FBPSegmentation(data.Dataset):
         self.args = args
 
         self.images_base = os.path.join(self.root, self.split, 'rgb_images')
-        self.annotations_base = os.path.join(self.root, self.split, 'gid_labels')
+        self.annotations_base = os.path.join(self.root, self.split, 'fbp_labels')
         self.ignore_index = 255
         self.class_names = ['unlabeled', 'industrial area', 'paddy field', 'irrigated field', 'dry cropland',
                  'garden land', 'arbor forest', 'shrub forest', 'park', 'natural meadow', 'artificial meadow', 
