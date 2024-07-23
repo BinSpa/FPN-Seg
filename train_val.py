@@ -220,6 +220,8 @@ class Trainer(object):
                 image, target = batch['image'], batch['label']
             elif self.args.dataset == 'GID':
                 image, target = batch['image'], batch['label']
+            elif self.args.dataset == 'FBP':
+                image, target = batch['image'], batch['label']
             else:
                 raise NotImplementedError
             if self.args.cuda:
@@ -291,6 +293,8 @@ class Trainer(object):
             if self.args.dataset == 'URUR':
                 image, target = batch['image'], batch['label']
             if self.args.dataset == 'GID':
+                image, target = batch['image'], batch['label']
+            if self.args.dataset == 'FBP':
                 image, target = batch['image'], batch['label']
             else:
                 raise NotImplementedError

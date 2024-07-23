@@ -10,13 +10,13 @@ from data import custom_transforms as tr
 class GIDSegmentation(data.Dataset):
     NUM_CLASSES = 6
 
-    def __init__(self, args, root="/mnt/data/nas/gyl/RS_DATASET/FBP", split="train"):
+    def __init__(self, args, root="/data1/gyl/RS_DATASET/FBP", split="train"):
         
         self.root = root
         self.split = split
         self.args = args
 
-        self.images_base = os.path.join(self.root, self.split, 'images')
+        self.images_base = os.path.join(self.root, self.split, 'rgb_images')
         self.annotations_base = os.path.join(self.root, self.split, 'gid_labels')
         self.ignore_index = 255
         self.class_names = ["background", "built-up", "farmland", "forest", "meadow", "water"]
