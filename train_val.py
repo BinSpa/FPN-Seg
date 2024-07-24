@@ -69,7 +69,7 @@ def parse_args():
     parser.add_argument('--batch_size', dest='batch_size',
 					    help='batch_size',
 					    default=16, type=int)
-    parser.add_argument('--slide_inference', dest='slide_inference', action="store_true",
+    parser.add_argument('--slide_inference', dest='slide_inference', action="store_false",
                         help='using slide inference for whole image.')
 
     # config optimization
