@@ -47,14 +47,14 @@ def parse_args():
 					    default=0, type=int)
     parser.add_argument('--epochs', dest='epochs',
 					    help='number of iterations to train',
-					    default=150, type=int)
+					    default=21000, type=int)
     parser.add_argument('--save_dir', dest='save_dir',
 					    help='directory to save models',
 					    default=None,
 					    nargs=argparse.REMAINDER)
     parser.add_argument('--num_workers', dest='num_workers',
 					    help='number of worker to load data',
-					    default=0, type=int)
+					    default=10, type=int)
     # cuda
     parser.add_argument('--cuda', dest='cuda',
                       help='whether use CUDA',default=True, type=bool)
@@ -68,7 +68,7 @@ def parse_args():
     # batch size
     parser.add_argument('--batch_size', dest='batch_size',
 					    help='batch_size',
-					    default=None, type=int)
+					    default=16, type=int)
     parser.add_argument('--slide_inference', dest='slide_inference', action="store_true",
                         help='using slide inference for whole image.')
 
@@ -119,7 +119,7 @@ def parse_args():
                         default=False, type=bool)
     parser.add_argument('--eval_interval', dest='eval_interval',
                         help='iterval to do evaluate',
-                        default=30, type=int)
+                        default=2100, type=int)
 
     parser.add_argument('--checkname', dest='checkname',
                         help='checkname',

@@ -16,6 +16,4 @@ python train_val.py \
 --batch_size 16 \
 --slide_inference \
 --num_workers 10 \
---mGPUs False \
---epochs 21000 \
---eval_interval 2100
+--mGPUs False
