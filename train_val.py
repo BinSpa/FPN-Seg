@@ -293,11 +293,11 @@ class Trainer(object):
         for iter, batch in enumerate(self.val_loader):
             if self.args.dataset == 'Cityscapes':
                 image, target = batch['image'], batch['label']
-            if self.args.dataset == 'URUR':
+            elif self.args.dataset == 'URUR':
                 image, target = batch['image'], batch['label']
-            if self.args.dataset == 'GID':
+            elif self.args.dataset == 'GID':
                 image, target = batch['image'], batch['label']
-            if self.args.dataset == 'FBP':
+            elif self.args.dataset == 'FBP':
                 image, target = batch['image'], batch['label']
             else:
                 raise NotImplementedError
