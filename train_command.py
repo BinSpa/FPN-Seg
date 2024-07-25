@@ -10,4 +10,4 @@ python train_val.py \
 --epochs 21000 \
 --eval_interval 2100
 
-python train_val.py --slide_inference --dataset 'FBP' --save_dir '../FBP' --batch_size 16 --num_workers 10
+python train_val.py --dataset 'FBP' --save_dir '../FBP' --batch_size 16 --num_workers 10

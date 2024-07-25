@@ -257,7 +257,7 @@ class Trainer(object):
 
     def slide_inference(self, inputs, crop_size=(512,512), slide=(341,341)):
         h_stride, w_stride = slide[0], slide[1]
-        h_crop, w_crop = self.crop_size[0], self.crop_size[1]
+        h_crop, w_crop = crop_size[0], crop_size[1]
         batch_size, _, h_img, w_img = inputs.shape
         out_channels = self.num_class
         h_grids = max(h_img - h_crop + h_stride - 1, 0) // h_stride + 1
