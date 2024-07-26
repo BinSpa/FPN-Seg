@@ -120,7 +120,7 @@ def parse_args():
                         default=False, type=bool)
     parser.add_argument('--eval_interval', dest='eval_interval',
                         help='iterval to do evaluate',
-                        default=2, type=int)
+                        default=2100, type=int)
 
     parser.add_argument('--checkname', dest='checkname',
                         help='checkname',
