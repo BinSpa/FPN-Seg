@@ -15,6 +15,7 @@ import glob
 import torch
 from torch.autograd import Variable
 import torch.nn as nn
+import torch.nn.functional as F
 import torch.optim as optim
 from datetime import datetime
 
@@ -119,7 +120,7 @@ def parse_args():
                         default=False, type=bool)
     parser.add_argument('--eval_interval', dest='eval_interval',
                         help='iterval to do evaluate',
-                        default=2100, type=int)
+                        default=2, type=int)
 
     parser.add_argument('--checkname', dest='checkname',
                         help='checkname',
